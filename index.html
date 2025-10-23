@@ -33,7 +33,25 @@
       --shadow: 0 10px 30px rgba(0,0,0,.35);
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: var(--bg);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      position: relative;
+    }
+    /* Single, page-wide decorative background (no per-section repetition) */
+    body::before{
+      content:"";
+      position: fixed; inset:0; z-index:-1; pointer-events:none;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(56,189,248,.18), transparent 60%),
+        radial-gradient(1200px 600px at -10% 10%, rgba(96,165,250,.18), transparent 60%);
+    }
+    @media (prefers-reduced-motion: reduce){ body::before{ background: none; } }
+    /* Smooth anchor scrolling */
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
     body{
       margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       background: radial-gradient(1200px 600px at 80% -10%, rgba(56,189,248,.18), transparent 60%),
@@ -46,8 +64,9 @@
     a:hover{text-decoration:underline}
     .wrap{max-width:1100px; margin:0 auto; padding:24px}
     header{display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .logo{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px}
-    .logo-mark{width:28px; height:28px; background:linear-gradient(135deg, var(--brand), var(--accent)); border-radius:7px; box-shadow:var(--shadow)}
+  .logo{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px}
+  .logo-img{width:28px; height:28px; object-fit:cover; border-radius:7px; box-shadow:var(--shadow); display:inline-block}
+  .logo-mark{width:28px; height:28px; background:linear-gradient(135deg, var(--brand), var(--accent)); border-radius:7px; box-shadow:var(--shadow)}
     nav a{margin-left:18px; color:var(--muted)}
     nav a.cta{color:#0b1220; background:linear-gradient(135deg, var(--brand), var(--accent)); padding:10px 14px; border-radius:10px; font-weight:600; box-shadow:var(--shadow)}
 
@@ -95,7 +114,7 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="logo"><div class="logo-mark"></div><span>SoftBleu</span></div>
+      <div class="logo"><img src="/logo.png" alt="SoftBleu logo" class="logo-img"><span>SoftBleu</span></div>
       <nav>
         <a href="#outcomes">Outcomes</a>
         <a href="#packages">Packages</a>
@@ -106,7 +125,7 @@
 
     <section class="hero">
       <div>
-        <h1>Your Email Operations Partner</h1>
+        <h1>B2C & DTC Email Marketing Agency</h1>
         <p class="sub">We build and run the entire email engine for B2B & DTC: <strong>SPF/DKIM/DMARC</strong>, warm‑up, domain pools & rotation, list hygiene, <strong>copy/HTML</strong>, segmentation, and disciplined <strong>A/B testing</strong>. Outcome: more <em>Primary inboxing</em>, replies, meetings, and revenue.</p>
         <div class="cta-row">
           <a class="btn primary" href="#contact">Book a 15‑min Mini‑Audit</a>
@@ -243,7 +262,7 @@
     <footer class="foot">
       <div class="wrap" style="padding:0">
         <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
-          <div class="logo"><div class="logo-mark"></div><span>SoftBleu</span></div>
+          <div class="logo"><img src="/logo.png" alt="SoftBleu logo" class="logo-img"><span>SoftBleu</span></div>
           <div>© <span id="y"></span> SoftBleu. All rights reserved. · <a href="#">Privacy</a></div>
         </div>
       </div>
