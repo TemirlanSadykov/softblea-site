@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SoftBleu – Email Operations Partner</title>
+  <meta name="description" content="SoftBleu builds and runs your entire email engine: deliverability, infrastructure, copy/HTML, segmentation and A/B testing for B2B & DTC." />
+  <meta property="og:title" content="SoftBleu – Email Operations Partner" />
+  <meta property="og:description" content="Deliverability + Lifecycle performance. We keep you out of Spam and convert more with disciplined testing." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220;          /* deep navy */
+      --card:#0f172a;        /* slate-900 */
+      --ink:#e2e8f0;         /* slate-200 */
+      --muted:#94a3b8;       /* slate-400 */
+      --brand:#60a5fa;       /* sky-400 */
+      --accent:#38bdf8;      /* sky-300 */
+      --ok:#34d399;          /* emerald */
+      --warn:#f59e0b;        /* amber */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(56,189,248,.18), transparent 60%),
+                  radial-gradient(1200px 600px at -10% 10%, rgba(96,165,250,.18), transparent 60%),
+                  var(--bg);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px; margin:0 auto; padding:24px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .logo{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px}
+    .logo-mark{width:28px; height:28px; background:linear-gradient(135deg, var(--brand), var(--accent)); border-radius:7px; box-shadow:var(--shadow)}
+    nav a{margin-left:18px; color:var(--muted)}
+    nav a.cta{color:#0b1220; background:linear-gradient(135deg, var(--brand), var(--accent)); padding:10px 14px; border-radius:10px; font-weight:600; box-shadow:var(--shadow)}
+
+    .hero{display:grid; grid-template-columns: 1.15fr 1fr; gap:28px; align-items:center; padding:64px 0}
+    .hero h1{font-size: clamp(32px, 5vw, 56px); line-height:1.05; margin:0 0 14px}
+    .sub{font-size: clamp(15px, 2.2vw, 18px); color:var(--muted); margin-bottom:22px}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 16px; border-radius:12px; font-weight:600}
+    .btn.primary{background:linear-gradient(135deg, var(--brand), var(--accent)); color:#0b1220; box-shadow:var(--shadow)}
+    .btn.ghost{border:1px solid rgba(148,163,184,.3); color:var(--ink)}
+
+    .panel{background:rgba(15,23,42,.75); border:1px solid rgba(148,163,184,.15); border-radius:18px; padding:20px; box-shadow:var(--shadow)}
+    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px}
+    .kpis .card{background:rgba(2,6,23,.4); border:1px solid rgba(148,163,184,.15); border-radius:14px; padding:14px}
+    .kpis h4{margin:0 0 4px; font-size:14px; color:var(--muted)}
+    .kpis .n{font-size:20px; font-weight:700}
+
+    section{padding:44px 0}
+    h2{font-size: clamp(24px, 4vw, 34px); margin:0 0 10px}
+    p.lead{color:var(--muted); margin-top:0}
+
+    .grid{display:grid; gap:18px}
+    .cols-3{grid-template-columns:repeat(3, minmax(0,1fr))}
+    .cols-2{grid-template-columns:repeat(2, minmax(0,1fr))}
+
+    .badge{display:inline-flex; gap:8px; align-items:center; font-size:12px; color:var(--muted)}
+    .dot{width:8px; height:8px; border-radius:10px; background:var(--ok)}
+
+    .pricing .plan{padding:22px; border:1px solid rgba(148,163,184,.18); border-radius:16px; background:rgba(2,6,23,.5)}
+    .pricing .price{font-size:28px; font-weight:800; margin:10px 0}
+    .pricing ul{margin:12px 0 0; padding-left:18px; color:var(--muted)}
+    .pricing li{margin:8px 0}
+
+    .foot{border-top:1px solid rgba(148,163,184,.15); margin-top:44px; padding:22px 0; color:var(--muted); font-size:14px}
+
+    @media (max-width: 880px){
+      nav{display:none}
+      .hero{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr}
+      .cols-3{grid-template-columns:1fr}
+      .cols-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><div class="logo-mark"></div><span>SoftBleu</span></div>
+      <nav>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#packages">Packages</a>
+        <a href="#plan">30‑Day Plan</a>
+        <a href="#contact" class="cta">Book Mini‑Audit</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Your Email Operations Partner</h1>
+        <p class="sub">We build and run the entire email engine for B2B & DTC: <strong>SPF/DKIM/DMARC</strong>, warm‑up, domain pools & rotation, list hygiene, <strong>copy/HTML</strong>, segmentation, and disciplined <strong>A/B testing</strong>. Outcome: more <em>Primary inboxing</em>, replies, meetings, and revenue.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">Book a 15‑min Mini‑Audit</a>
+          <a class="btn ghost" href="#packages">See Packages</a>
+        </div>
+        <div class="badge" style="margin-top:12px"><span class="dot"></span><span>Bulk‑sender rules ready (Gmail/Yahoo 2024+)</span></div>
+      </div>
+      <div class="panel">
+        <div style="font-weight:700; margin-bottom:8px">What we improve</div>
+        <div class="kpis">
+          <div class="card">
+            <h4>Inbox Placement</h4>
+            <div class="n">→ 80%+ Primary</div>
+            <div class="mini">Seed‑tested & monitored</div>
+          </div>
+          <div class="card">
+            <h4>Reply/Meetings</h4>
+            <div class="n">+20–40%</div>
+            <div class="mini">Infra + copy/testing</div>
+          </div>
+          <div class="card">
+            <h4>Bounce & Complaints</h4>
+            <div class="n"><span style="color:var(--ok)">\<2–3%</span> / \<0.1%</div>
+            <div class="mini">Hygiene & throttles</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="outcomes">
+      <h2>Outcomes we own</h2>
+      <p class="lead">Deliverability + Lifecycle performance, measured on <strong>Primary inbox %</strong>, <strong>replies/meetings</strong> (B2B) and <strong>email‑attributed revenue</strong> (DTC). No vanity opens.</p>
+      <div class="grid cols-3">
+        <div class="panel">
+          <h3 style="margin-top:0">Deliverability & Infra</h3>
+          <ul>
+            <li>Domain strategy (pools, caps, rotation) & warm‑up ramps</li>
+            <li>SPF/DKIM/DMARC alignment, BIMI‑readiness, TLS/PTR</li>
+            <li>Seed tests, Google Postmaster monitoring, blocklist checks</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 style="margin-top:0">Lifecycle & Creative</h3>
+          <ul>
+            <li>Welcome, abandon, win‑back flows (DTC) / cold & nurture (B2B)</li>
+            <li>Offer‑driven copy, modular HTML, dark‑mode QA</li>
+            <li>A/B/n cadence: hook, layout, segment, send‑time</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 style="margin-top:0">Hygiene & Compliance</h3>
+          <ul>
+            <li>Continuous verification & suppression syncing</li>
+            <li>One‑click unsubscribe, consent logging, regional policies</li>
+            <li>Weekly health reviews & incident playbooks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="pricing">
+      <h2>Packages</h2>
+      <p class="lead">Clear scope. Fast to buy. Designed to land fast and scale.</p>
+      <div class="grid cols-3">
+        <div class="plan">
+          <div class="badge"><span class="dot"></span><span>2–3 weeks</span></div>
+          <h3>Deliverability Starter</h3>
+          <div class="price">$800–$1,500 (one‑time)</div>
+          <ul>
+            <li>DNS/auth fix & alignment (SPF/DKIM/DMARC)</li>
+            <li>Warm‑up & ramp plan + daily caps</li>
+            <li>Seed tests + Postmaster setup</li>
+            <li>Hygiene pass & quick‑wins report</li>
+          </ul>
+        </div>
+        <div class="plan" style="border-color:rgba(96,165,250,.5)">
+          <div class="badge"><span class="dot" style="background:var(--brand)"></span><span>Ongoing</span></div>
+          <h3>Deliverability Care</h3>
+          <div class="price">$750 / month</div>
+          <ul>
+            <li>Monitoring (seeds, Postmaster), caps & rotation</li>
+            <li>List hygiene & complaint control</li>
+            <li>Weekly experiments & summary</li>
+            <li>Incident recovery playbooks</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <div class="badge"><span class="dot"></span><span>Retainer</span></div>
+          <h3>Lifecycle Pro</h3>
+          <div class="price">$1,800 / month</div>
+          <ul>
+            <li>Flows + campaigns, modular HTML</li>
+            <li>Segmentation & test calendar</li>
+            <li>Revenue‑focused reporting</li>
+            <li>Pairs with Care for full stack</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="plan">
+      <h2>First 30 Days</h2>
+      <div class="grid cols-2">
+        <div class="panel">
+          <h3 style="margin-top:0">Days 0–7</h3>
+          <ul>
+            <li>Mini‑audit → DNS/auth fixes & seed baseline</li>
+            <li>Ramp plan approved; Postmaster live</li>
+            <li>Risky segments throttled; hygiene pass</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 style="margin-top:0">Days 8–30</h3>
+          <ul>
+            <li>Inbox % trending to ≥80% Primary</li>
+            <li>Reply/meeting or revenue lift from tests</li>
+            <li>Weekly summary + next experiments</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Book a Mini‑Audit</h2>
+      <p class="lead">15 minutes. We’ll show auth status, seed snapshot, and the exact 30‑day ramp & hygiene plan.</p>
+      <div class="cta-row" style="margin-bottom:10px">
+        <!-- Replace the href below with your Calendly/meeting link when ready -->
+        <a class="btn primary" href="mailto:contact@softbleu.com?subject=Mini‑Audit%20Request&body=Hi%20SoftBleu%2C%0A%0AWe%E2%80%99d%20like%20a%2015‑min%20mini‑audit.%20Here%E2%80%99s%20our%20domain%3A%20_____%0ASend%20a%20few%20times%20that%20work.%0A">Email to Schedule</a>
+        <a class="btn ghost" href="#" onclick="alert('Hook this up to Calendly/Cal.com when ready.'); return false;">Use Calendly (soon)</a>
+      </div>
+      <small class="muted" style="color:var(--muted)">Prefer LinkedIn? DM the founder — @softbleu</small>
+    </section>
+
+    <footer class="foot">
+      <div class="wrap" style="padding:0">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
+          <div class="logo"><div class="logo-mark"></div><span>SoftBleu</span></div>
+          <div>© <span id="y"></span> SoftBleu. All rights reserved. · <a href="#">Privacy</a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
